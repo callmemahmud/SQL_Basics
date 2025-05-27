@@ -87,12 +87,12 @@ INSERT INTO Title
  
  INSERT INTO all_students
  (student_id, school_id, grade_level, date_of_birth, hometown) VALUES
- (110111, 205, 1, '2013-01-10', 'Pleasanton'),
+ (110111, 205, 1, '2013-01-10', 'Dhaka'),
  (110115, 205, 1, '2013-03-15', 'Dublin'),
- (110119, 205, 2, '2012-02-13', 'San Ramon'),
- (110121, 205, 3, '2011-01-13', 'Dublin'),
- (110125, 205, 2, '2012-04-25','Dublin'),
- (110129, 205, 3, '2011-02-22', 'San Ramon');
+ (110119, 205, 2, '2012-02-13', 'Texas'),
+ (110121, 205, 3, '2011-01-13', 'Newfoundland'),
+ (110125, 205, 2, '2012-04-25','Dubai'),
+ (110129, 205, 3, '2011-02-22', 'San Diago');
  
  CREATE TABLE login_info (
  user_id INT,
@@ -151,15 +151,15 @@ INSERT INTO Title
  INSERT INTO all_users
  (user_id, user_name, registration_date, active_last_month) VALUES
  (1, 'sam', '2018-01-21', 1),
- (2, 'phelp', '2018-01-15', 1),
- (3, 'peyton', '2018-03-12', 1),
- (4, 'ryan', '2018-02-17', 0),
- (5, 'james', '2018-01-21', 0),
- (6, 'christine', '2018-02-27', 1),
- (7, 'bolt', '2018-02-28', 0),
- (8, 'jessica', '2018-01-11', 1),
- (9, 'paul', '2018-04-23', 1),
- (10, 'brian', '2018-03-12', 0);
+ (2, 'altman', '2018-01-15', 1),
+ (3, 'Joe', '2018-03-12', 1),
+ (4, 'rogan', '2018-02-17', 0),
+ (5, 'elon', '2018-01-21', 0),
+ (6, 'musk', '2018-02-27', 1),
+ (7, 'nat', '2018-02-28', 0),
+ (8, 'bolt', '2018-01-11', 1),
+ (9, 'dan', '2018-04-23', 1),
+ (10, 'bryan', '2018-03-12', 0);
  
  
  CREATE TABLE sport_accounts(
@@ -173,12 +173,12 @@ INSERT INTO Title
  
  INSERT INTO sport_accounts 
  (sport_player_id, sport_player, sport_category) VALUES
- (2, 'phelp', 'swimming'),
- (7, 'bolt', 'running'),
- (8,'jessica', 'swimming'),
- (9, 'paul', 'basketball'),
+ (2, 'altman', 'swimming'),
+ (7, 'sam', 'running'),
+ (8,'bolt', 'swimming'),
+ (9, 'dan', 'basketball'),
  (10, 'brian', 'cricket'),
- (5, 'james', 'cricket');
+ (5, 'elon', 'cricket');
  
  
  
