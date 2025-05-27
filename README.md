@@ -1,1 +1,1 @@
-'Command' contains the basics
+'Command' contains the basics ('command.md')
