@@ -319,19 +319,24 @@ SELECT sentence, wordcount(sentence) as "Words" from test;
 SELECT * FROM table_name ORDER BY field_name LIMIT 5 OFFSET 5;  
 
 --Find duplicate entries
-SELECT *,  COUNT(field_name)  FROM table_name GROUP BY field_name HAVING ( COUNT(field_name) > 1 ) 
+SELECT *,  COUNT(field_name)
+FROM table_name GROUP BY field_name HAVING ( COUNT(field_name) > 1 ) 
 
 ALTER TABLE table_name AUTO_INCREMENT =1
 ALTER TABLE `table_name` DROP PRIMARY KEY 
 ALTER TABLE `table_name` ENGINE = InnoDB
-ALTER TABLE table_name CHANGE `id` `id` INT( 11 ) NOT NULL AUTO_INCREMENT 
-ALTER TABLE `table_name` ADD `id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY FIRST ;
-ALTER TABLE table_name ADD column_name datatype AFTER column_name 
-ALTER TABLE table_name DROP COLUMN column_name  
+ALTER TABLE table_name CHANGE `id` `id` INT( 11 ) NOT NULL AUTO_INCREMENT  --Auto-increment allows a unique number to be 
+                                                                            generated automatically when a new record is 
+                                                                            inserted into a table--
+ALTER TABLE `table_name` ADD `id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY FIRST ; --Add a new auto-increment ID column at 
+                                                                                  the beginning--
+ALTER TABLE table_name   ADD column_name datatype AFTER column_name 
+ALTER TABLE table_name   DROP COLUMN column_name  
 ALTER TABLE table_name MODIFY column_name datatype
 ALTER TABLE table_name CHANGE oldname newname datatype
 
 RENAME TABLE `table_name_old` TO `table_name_new`
+
 
 --Update particular character
 UPDATE mytable SET city = REPLACE(city, 'ï', 'i')   
@@ -383,11 +388,19 @@ SELECT * FROM `TABLENAME` WHERE `field` REGEXP '^-?[0-9]+$'
 --w3resource.com
 SELECT CONCAT('w3resource','.','com'); 
 
---bit datatype
+--usual bit datatype
 CREATE TABLE table_bit (id SERIAL, a BIT(3), b BIT(8), c BIT(16)); 
 
---Enum datatype
+--Enum is a datatype, a String object that can have only one value
 CREATE TABLE table_enum (id SERIAL, status ENUM('Active', 'Deactive'));
+--another example of it,
+create table Student_data
+(
+student_id int,
+student_name varchar(20),
+Grade enum('pass','fail') / * - - -  ENUM Data type column - - - * /
+);
+
 
 --Get the length 
 SELECT CHAR_LENGTH(field_name) AS Length FROM `table_name`; 
